@@ -1,0 +1,39 @@
+<!ELEMENT RasporedTakmicenja (Utakmica)+>
+
+<!ELEMENT Utakmica (Tim1, Tim2, Termin)>
+
+<!ELEMENT Tim1 ((Igrac)+, Trener, Kontinent, Zemlja, (Medalje)*)>
+<!ELEMENT Tim2 ((Igrac)+, Trener, Kontinent, Zemlja, (Medalje)*)>
+
+<!ELEMENT Igrac (Ime, Prezime, Klub, BrojUtakmica)>
+
+<!ELEMENT Ime (#PCDATA)>
+<!ELEMENT Prezime (#PCDATA)>
+<!ELEMENT Klub (#PCDATA)>
+<!ELEMENT BrojUtakmica (#PCDATA)>
+
+<!ELEMENT Trener (Ime, Prezime, Godine)>
+<!ELEMENT Godine (#PCDATA)>
+
+<!ELEMENT Kontinent (#PCDATA)>
+<!ELEMENT Zemlja (#PCDATA)>
+
+<!ELEMENT Medalje (Mesto, Medalja, Godina)>
+
+<!ELEMENT Mesto (Lokacija)>
+
+<!ELEMENT Lokacija (Region, Grad)>
+<!ELEMENT Region (#PCDATA)>
+<!ELEMENT Grad (#PCDATA)>
+<!ATTLIST Lokacija stadion CDATA #REQUIRED>
+<!ATTLIST Lokacija brMesta CDATA #IMPLIED>
+
+<!ELEMENT Medalja (#PCDATA)>
+<!ELEMENT Godina (#PCDATA)>
+
+<!ELEMENT Termin (Datum, Cas)>
+<!ELEMENT Datum (#PCDATA)>
+<!ELEMENT Cas (#PCDATA)>
+<!ATTLIST Termin tvPrenos CDATA #REQUIRED>
+<!ATTLIST Termin kanal CDATA #IMPLIED>
+
